@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<html lang="en">
+<body>
+
+
+
+
+{% macro books(title) %}
+
+        <li>
+            <a href="https://kodansha.us/volume/kakushigoto-my-dads-secret-ambition-1/" class="bookshelf__book" aria-current="owned     ">
+                <div class="l-box">
+                    <p>Saint Young Men</p>
+
+                    <div class="bookshelf__number">
+                        <div>
+                            <span class="screen-reader-text">Volume</span> 1 </div>
+                    </div>
+
+{#                    #BOOK LOGO#}
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve" aria-hidden="true" class="kodansha-logo kodansha-logo--symbol">
+                        <g>
+                          <path d="M0,0v2000h2000V0H0z M818.12,1138.65V110.24h971.76l-608.25,1119.55L818.12,1138.65z M1889.76,157.3v1250.02
+                            l-597.72-149.85L1889.76,157.3z M707.89,110.24v1000.78L110.24,961.19V110.24H707.89z M110.24,1074.82l597.65,149.83v665.11H110.24
+                            V1074.82z M818.12,1889.76v-637.47l1071.65,268.67v368.81H818.12z"></path>
+                        </g>
+                    </svg>
+                </div>
+            </a>
+        </li>
+
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+{% block nationtime %}
+{% if heading =='Top Listings' %}
+<div class="container">
+    <div class="row col-12 justify-content-md-center">
+
+            <form action="" method="post" style="text-align:center" novalidate role="form">
+                <div class="container-fluid mt-3">
+                    <h3>Town Render</h3>
+                    <p>Fill in the data below.</p>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            {{nform.date}}
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            {{nform.datetwo}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            {{nform.town}}
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <label class="form-check-label">All nation names are case sensitive</label>
+                    <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                </div>
+                <div class="form-button mt-3 mb-3">
+                    {{form.submit}}
+                </div>
+            </form>
+
+        <div class="row col-12 justify-content-md-center">
+            <img style="display: inline-block;vertical-align: middle;line-height: normal; max-width: 40vw"
+                         src="data:image/png;base64, {{image}}" class="img-fluid" alt="Town"/>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<h3>Nation Render</h3>
+<p>Fill in the data below.</p>
+<form action="" method="post" style="text-align:center" novalidate role="form">
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                {{nform.date}}
+            </div>
+            <div class="col-12 col-sm-6">
+                {{nform.datetwo}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{nform.town}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12 mt-3">
+        <label class="mb-3 mr-1" for="server">Server: </label>
+        {{ option1(id='nova', class="btn-check", checked=True) }}
+        <label class="btn btn-sm btn-outline-secondary" for="nova">{{ form.server.choices[0][1]}}</label>
+        {{ option2(id='aurora', class="btn-check") }}
+        <label class="btn btn-sm btn-outline-secondary" for="aurora">{{form.server.choices[1][1]}}</label>
+    </div>
+    <div class="form-check">
+        <label class="form-check-label">All nation names are case sensitive</label>
+        <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+    </div>
+    <div class="form-button mt-3">
+        {{form.submit}}
+    </div>
+</form>
+{% endif %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="text-center mt-2">
+    {% for category, message in messages %}
+    <label>{{ message }}</label>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+{% block townquery %}
+
+<h3>Town Search</h3>
+<p>Fill in the data below.</p>
+<form action="" method="post" style="text-align:center" novalidate role="form">
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12">
+                {{qform.date}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{qform.query}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-check">
+        <label class="form-check-label">All town names are case sensitive</label>
+        <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+    </div>
+    <div class="form-button mt-3">
+        {{qform.qsubmit}}
+    </div>
+</form>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+            <span class="" style="text-align: justify;">
+                    <p  style="text-align: justify;">
+                        {% for i in text %}
+                        {% for j in i %}
+                        {{ j }}
+                        {%endfor%}
+                        {%endfor%}
+                    </p>
+            </span>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Optional JavaScript -->
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
