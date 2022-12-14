@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d732040-4952-4278-88fa-bd56a501cd3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Main/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/database.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/init_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9915d96-b46d-4726-9c9b-94dfdf79ac2c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9915d96-b46d-4726-9c9b-94dfdf79ac2c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Main/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/init_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Main/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Main/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +94,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="init_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Library" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/init_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Library" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +129,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\Coding\Library\Main\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.init_db" />
       </list>
     </recent_temporary>
   </component>
@@ -130,6 +157,8 @@
       <workItem from="1671013672702" duration="2672000" />
       <workItem from="1671016385469" duration="593000" />
       <workItem from="1671017263523" duration="12000" />
+      <workItem from="1671020410867" duration="1578000" />
+      <workItem from="1671022028536" duration="570000" />
     </task>
     <servers />
   </component>
@@ -151,7 +180,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Library$main.coverage" NAME="main Coverage Results" MODIFIED="1671017269243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Library$init_db.coverage" NAME="init_db Coverage Results" MODIFIED="1671022136264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Main" />
+    <SUITE FILE_PATH="coverage/Library$main.coverage" NAME="main Coverage Results" MODIFIED="1671022589279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Library$Library.coverage" NAME="Library Coverage Results" MODIFIED="1671013697425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
