@@ -1,4 +1,4 @@
-from Main import create_app
+from Main.app import create_app
 #bruh
 # Shut down the scheduler when exiting the app
 
