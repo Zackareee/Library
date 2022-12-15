@@ -4,11 +4,11 @@
 
 <body>
 
-    {% macro books(title) %}
+    {% macro books(book) %}
     <li>
-        <a href="book['link']" class="bookshelf__book" aria-current="owned     ">
+        <a href="{{book.link}}" class="bookshelf__book" aria-current="owned     ">
             <div class="l-box">
-                <p>{{title.title}}</p>
+                <p>{{book.title}}</p>
 
                 <div class="bookshelf__number">
                     <div>
@@ -24,8 +24,27 @@
             </div>
         </a>
     </li>
-    {% endmacro %}
 
+    {% endmacro %} {% block book_insert %}
+    <h3>Add a book</h3>
+    <p>Fill in the data below.</p>
+    <form action="" method="post" style="text-align:center" novalidate role="form">
+
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <p>Name</p> {{BookForm.name}}
+            </div>
+            <div class="col-12 col-sm-6">
+                <p>Volume</p> {{BookForm.volume}}
+            </div>
+        </div>
+
+
+        <div class="form-button mt-3">
+            {{BookForm.submit}}
+        </div>
+    </form>
+    {% endblock %}
 
     <!-- Optional JavaScript -->
 

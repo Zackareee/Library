@@ -19,10 +19,21 @@
 
     </div>
     <!-- Header -->
+
+
     <div class="form-body">
         <div class="form-holder">
             <div class="row justify-content-center">
-                <!--        BOOKSHELF BELOW           -->
+
+                <!--            BOOK FORM             -->
+                <div class="form-content">
+                    <div class="form-items ">
+                        {% block book_insert %} {% endblock %}
+                    </div>
+                </div>
+                <!--        END OF BOOK FORM          -->
+
+                <!--            BOOKSHELF             -->
                 <div style="border: 2px solid rgba(0,0,0,.5);border-radius: 25px;background: rgba(0,0,0,.2); padding: 20px; width: 80vw;height:35em">
                     <ul class="bookshelf l-reel">
                         {% for i in booksvar %} {{ books(i) }} {%endfor%}
@@ -30,7 +41,7 @@
 
                     </ul>
                 </div>
-                <!--        END OF BOOKSHELF         -->
+                <!--        END OF BOOKSHELF          -->
             </div>
         </div>
     </div>

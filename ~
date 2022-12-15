@@ -1,0 +1,43 @@
+iterative book display
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch Frontend-Changes
+# Your branch is up to date with 'origin/Frontend-Changes'.
+#
+# Changes to be committed:
+#	modified:   .idea/workspace.xml
+#	deleted:    Main/database.db
+#	deleted:    Main/file.json
+#	deleted:    Main/static/TempRender.gif
+#	deleted:    Main/static/TempRender.png
+#	deleted:    Main/templates/base.html
+#	deleted:    Main/templates/index.html
+#	renamed:    Main/init_db.py -> database/init_db.py
+#	renamed:    Main/schema.sql -> database/schema.sql
+#	renamed:    Main/main.py -> main.py
+#	renamed:    Main/.DS_Store -> src/.DS_Store
+#	renamed:    Main/.idea/.gitignore -> src/.idea/.gitignore
+#	renamed:    Main/.idea/Main.iml -> src/.idea/Main.iml
+#	renamed:    Main/.idea/inspectionProfiles/Project_Default.xml -> src/.idea/inspectionProfiles/Project_Default.xml
+#	renamed:    Main/.idea/inspectionProfiles/profiles_settings.xml -> src/.idea/inspectionProfiles/profiles_settings.xml
+#	renamed:    Main/.idea/misc.xml -> src/.idea/misc.xml
+#	renamed:    Main/.idea/modules.xml -> src/.idea/modules.xml
+#	renamed:    Main/.idea/vcs.xml -> src/.idea/vcs.xml
+#	renamed:    Main/__init__.py -> src/__init__.py
+#	new file:   src/__pycache__/__init__.cpython-38.pyc
+#	renamed:    Main/__pycache__/__init__.cpython-39.pyc -> src/__pycache__/__init__.cpython-39.pyc
+#	new file:   src/__pycache__/app.cpython-38.pyc
+#	renamed:    Main/__pycache__/app.cpython-39.pyc -> src/__pycache__/app.cpython-39.pyc
+#	new file:   src/__pycache__/routes.cpython-38.pyc
+#	renamed:    Main/__pycache__/routes.cpython-39.pyc -> src/__pycache__/routes.cpython-39.pyc
+#	renamed:    Main/app.py -> src/app.py
+#	renamed:    Main/routes.py -> src/routes.py
+#	renamed:    Main/static/css/index.css -> src/static/css/index.css
+#	renamed:    Main/static/css/shelving.css -> src/static/css/shelving.css
+#	new file:   src/templates/base.html
+#	new file:   src/templates/index.html
+#	renamed:    Main/utils/__pycache__/__init__.cpython-39.pyc -> src/utils/__pycache__/__init__.cpython-39.pyc
+#	renamed:    Main/utils/__pycache__/creator.cpython-39.pyc -> src/utils/__pycache__/creator.cpython-39.pyc
+#	renamed:    Main/utils/__pycache__/routes.cpython-39.pyc -> src/utils/__pycache__/routes.cpython-39.pyc
+#
