@@ -5,14 +5,25 @@
 <body>
 
 
+{% block content %}
+    <h1>{% block title %} Books {% endblock %}</h1>
+    {% for book in booksvar %}
+        <div class='book'>
+            <p>{{ book['id'] }}</p>
+            <h2>{{ book['title'] }}</h2>
+            <h2>{{ book['link'] }}</h2>
+            <h2>{{ book['reaad_status'] }}</h2>
 
+        </div>
+    {% endfor %}
+{% endblock %}
 
 {% macro books(title) %}
-
+    {% for book in booksvar %}
         <li>
-            <a href="https://kodansha.us/volume/kakushigoto-my-dads-secret-ambition-1/" class="bookshelf__book" aria-current="owned     ">
+            <a href="book['link']" class="bookshelf__book" aria-current="owned     ">
                 <div class="l-box">
-                    <p>Saint Young Men</p>
+                    <p>book['title']</p>
 
                     <div class="bookshelf__number">
                         <div>
@@ -30,6 +41,7 @@
                 </div>
             </a>
         </li>
+    {% endfor %}
 
 {% endmacro %}
 
