@@ -21,7 +21,6 @@
     --color-purple-rgb: 201, 100, 207;
     --color-red-rgb: 245, 51, 63;
     --color-yellow-rgb: 255, 230, 0;
-
     --color-background-2: var(--color-gray-light);
     --color-background-3: var(--color-gray-mid);
     --color-text: var(--color-black);
@@ -85,8 +84,6 @@
     --site-top-bump: 10rem
 }
 
-
-
 body.admin-bar {
     --wpadminbar-height: 32px
 }
@@ -109,9 +106,6 @@ body ::-webkit-scrollbar {
     width: .25rem;
     width: var(--border-width-lg)
 }
-
-
-
 
 a {
     color: inherit;
@@ -146,7 +140,8 @@ a {
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: var(--space-02) var(--l-reel__gutter) var(--space-04);
+    padding: var(--space-02) var(--l-reel__gutter);
+    /* var(--space-04) */
     position: relative;
     z-index: 0
 }
@@ -163,14 +158,11 @@ a {
     width: auto
 }
 
-
-
-
 .bookshelf {
     --bookshelf__height: 25em;
     --bookshelf__font-size-title: var(--font-size-03);
     --bookshelf__font-size-number: inherit;
-    height:100%;
+    height: 100%;
     --l-reel__gap: calc(var(--border-width-md)*-1.1);
     font-size: var(--bookshelf__font-size-title);
     margin-left: calc(var(--l-reel__gutter)*-1);
@@ -224,7 +216,7 @@ a {
 .bookshelf__book .l-box {
     --l-box__gutter: var(--space-03);
     background: #fff;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     border: .125rem solid;
     border: var(--border-width-md) solid;
     height: 100%;
@@ -262,7 +254,6 @@ a {
     border-color: #000;
     border-color: var(--color-text);
     color: #fff;
-
 }
 
 .bookshelf__book[aria-current="owned"] .l-box {
@@ -305,10 +296,6 @@ a {
         transform: rotate(-3.5deg);
     }
 }
-
-
-
-
 
 .screen-reader-text {
     border: 0;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" id="kodansha-comics-style-css" href="{{ url_for('static', filename='css/shelving.css') }}">
+    <title>EMC Dynmap Archive</title>
+</head>
+
+<body>
+    <div class="content">
+
+    </div>
+    <!-- Header -->
+    <div class="form-body">
+        <div class="form-holder">
+            <div class="row justify-content-center">
+                <!--        BOOKSHELF BELOW           -->
+                <div style="border: 2px solid rgba(0,0,0,.5);border-radius: 25px;background: rgba(0,0,0,.2); padding: 20px; width: 80vw;height:35em">
+                    <ul class="bookshelf l-reel">
+                        {% for i in booksvar %} {{ books(i) }} {%endfor%}
+
+
+                    </ul>
+                </div>
+                <!--        END OF BOOKSHELF         -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
