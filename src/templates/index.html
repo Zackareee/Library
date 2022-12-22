@@ -6,7 +6,11 @@
 
     {% macro books(book) %}
     <li>
-        <a href="{{book.link}}" class="bookshelf__book" aria-current="owned     ">
+        {% if book.read_status|int == 1 %}
+        <a href="{{book.link}}" class="bookshelf__book" aria-current="read">
+        {% else %} 
+        <a href="{{book.link}}" class="bookshelf__book" aria-current="unread">
+        {% endif %}
             <div class="l-box">
                 <p>{{book.title}}</p>
 

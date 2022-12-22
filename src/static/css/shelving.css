@@ -257,7 +257,7 @@ a {
     --l-sidebar__gap: var(--space-03)
 }
 
-.bookshelf__book[aria-current="page"] .l-box {
+.bookshelf__book[aria-current="dark"] .l-box {
     background: #000;
     background: var(--color-text);
     border-color: #000;
@@ -265,12 +265,14 @@ a {
     color: #fff;
 }
 
-.bookshelf__book[aria-current="owned"] .l-box {
+.bookshelf__book[aria-current="read"] .l-box {
     background: #dddddd;
     border-color: #000;
     border-color: var(--color-text);
     color: #000;
 }
+
+.bookshelf__book[aria-current="unread"] .l-box {}
 
 .bookshelf__book .kodansha-logo {
     font-size: 1rem
