@@ -12,5 +12,6 @@ else:
 
 class BookForm(FlaskForm):
   name =  StringField(validators=[InputRequired()], render_kw={'class':'form-control', 'placeholder':'One Piece'})
+  link =  StringField(render_kw={'class':'form-control', 'placeholder':'https://google'})
   volume = DecimalField(validators=[Optional()],render_kw={'class': 'form-control', 'placeholder':'001'})
   submit = SubmitField('Test', render_kw={'class':'btn btn-primary'})

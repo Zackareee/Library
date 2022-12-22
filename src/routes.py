@@ -21,7 +21,7 @@ def add_header(response):
 
 @mainbp.route('/', methods=['GET', 'POST'])
 def index():
-    
+
     create_book_form = BookForm()
     conn = get_db_connection()
     booksvar = conn.execute('SELECT * FROM books').fetchall()
@@ -29,7 +29,7 @@ def index():
     
     if request.method == "POST": #Submitting a form
         print("wow")
-        return render_template('index.html', BookForm=create_book_form)
+        return render_template('index.html',  booksvar=booksvar,BookForm=create_book_form)
 
     return render_template('index.html', booksvar=booksvar, BookForm=create_book_form)
 
