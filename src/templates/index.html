@@ -10,12 +10,13 @@
             <div class="l-box">
                 <p>{{book.title}}</p>
 
+
+                {% if book.volume|int > 0 %}
                 <div class="bookshelf__number">
                     <div>
-                        <span class="screen-reader-text">Volume</span> 1 </div>
+                        <span class="screen-reader-text">Volume</span> {{book.volume}} </div>
                 </div>
-
-                {#BOOK LOGO#}
+                {% endif %} {#BOOK LOGO#}
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve" aria-hidden="true" class="kodansha-logo kodansha-logo--symbol">
                     <g>
                         <path d="M0,0v2000h2000V0H0z M818.12,1138.65V110.24h971.76l-608.25,1119.55L818.12,1138.65z M1889.76,157.3v1250.02 l-597.72-149.85L1889.76,157.3z M707.89,110.24v1000.78L110.24,961.19V110.24H707.89z M110.24,1074.82l597.65,149.83v665.11H110.24 V1074.82z M818.12,1889.76v-637.47l1071.65,268.67v368.81H818.12z"></path>

@@ -81,7 +81,8 @@
     --flow-gap-default: var(--space-05);
     --flow-gap: var(--flow-gap-default);
     --flow-gap-all: initial;
-    --site-top-bump: 10rem
+    --site-top-bump: 10rem;
+    --transition-speed: 0.3s;
 }
 
 body.admin-bar {
@@ -221,10 +222,18 @@ a {
     border: var(--border-width-md) solid;
     height: 100%;
     transform-origin: bottom;
-    transition: transform 125ms ease-in-out;
+    transition: transform var(--transition-speed) ease-in-out;
     will-change: transform;
     align-items: center;
     display: flex
+}
+
+.bookshelf>:first-child a {
+    transition: var(--transition-speed) all ease-in-out;
+}
+
+.bookshelf>:nth-child(n+2) a {
+    transition: var(--transition-speed) all ease-in-out;
 }
 
 .bookshelf__book .l-box>* {
