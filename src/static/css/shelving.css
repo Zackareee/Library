@@ -86,6 +86,23 @@
     --flow-gap-all: initial;
     --site-top-bump: 10rem;
     --transition-speed: 0.3s;
+    /*  */
+    --origin-height: calc(30.5em / 2);
+    --origin-width: calc(var(--origin-height) * var(--tankōbon-aspect-ratio));
+    /* --origin-offset: calc(var(--origin-width) * cos(3.5deg)) */
+    --origin-offset: 1.75em;
+}
+
+#example {
+    display: none;
+    width: var(--origin-width);
+    height: var(--origin-height);
+}
+
+#example2 {
+    display: none;
+    width: .075em;
+    height: 1.575em;
 }
 
 body.admin-bar {
@@ -298,7 +315,7 @@ a {
 
 @media (any-hover:hover) {
     .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):nth-child(n+2) a {
-        margin-left: 1.575em;
+        margin-left: var(--origin-offset);
         margin-right: .075em;
     }
     .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):first-child a {
