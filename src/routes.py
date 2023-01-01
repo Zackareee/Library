@@ -24,7 +24,7 @@ def index():
     create_book_form = BookForm()
     edit_book_form = EditForm()
     conn = get_db_connection()
-     
+    cur = conn.cursor()
      
     if request.method == "POST": #Submitting a form
         print("wow")
@@ -33,8 +33,18 @@ def index():
             title = (edit_book_form.Ename.data)
             volume = (edit_book_form.Evolume.data)
             #if user has book id edit_book_form.Eid.data:
-            conn.execute(f"UPDATE books SET title = \"{title}\", volume = {volume} WHERE id = {id}")
+            cur.execute(f"UPDATE books SET title = \"{title}\", volume = {volume} WHERE id = {id}")
     booksvar = conn.execute('SELECT * FROM books').fetchall()
+
+    if request.method == "POST": #Submitting a form
+        print("wow")
+        if create_book_form.validate_on_submit():
+            name = (create_book_form.name.data) #TODO MUST CHECK AGAINST ID'S LINKED TO CURRENT USER TO AVOID MALICIOUS DATA EDITS.
+            link = (create_book_form.link.data)
+            volume = (create_book_form.volume.data)
+            cur.execute(f"INSERT INTO books(title,volume) VALUES('{name}','{volume}')")
+    booksvar = cur.execute('SELECT * FROM books').fetchall()
+    conn.commit()
     conn.close()      
     return render_template('index.html', booksvar=booksvar, BookForm=create_book_form, EditForm=edit_book_form)
 
