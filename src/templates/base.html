@@ -15,9 +15,7 @@
 </head>
 
 <body>
-    <div class="content">
 
-    </div>
     <!-- Header -->
     <!-- Button trigger modal -->
 
@@ -34,8 +32,8 @@
         </div>
         <div class="row justify-content-center">
             <!--            BOOKSHELF             -->
-            <div style="border: 2px solid rgba(0,0,0,.5);border-radius: 25px;background: rgba(0,0,0,.2); padding: 20px; width: 80vw;height:35em">
-                <ul class="bookshelf l-reel drag-sort-enable">
+            <div style="border: 2px solid rgba(0,0,0,.5);border-radius: 25px;background: rgba(0,0,0,.2); padding: 20px; width: 80vw;">
+                <ul class="bookshelf l-reel drag-sort-enable" style="height:30.5em">
                     {% for i in booksvar %} {{ books(i) }} {%endfor%}
 
 

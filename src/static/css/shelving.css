@@ -1,5 +1,8 @@
 @use "sass:string";
 :root {
+    --shelf-height: 30.5em;
+    --tankōbon-aspect-ratio: 3.5/38;
+    --omnibus-aspect-ratio: 7/38;
     --color-white: #fff;
     --color-gray-light: #f2f2f2;
     --color-gray-mid: #ddd;
@@ -141,7 +144,8 @@ a {
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: var(--space-02) var(--l-reel__gutter);
+    padding: var(--l-reel__gutter);
+    /* padding: var(--space-02) var(--l-reel__gutter); var(--space-04)*/
     /* var(--space-04) */
     position: relative;
     z-index: 0
@@ -174,7 +178,7 @@ a {
     writing-mode: vertical-rl
 }
 
-@media screen and (min-width:50em) {
+@media screen {
     .bookshelf {
         --bookshelf__font-size-title: var(--font-size-06);
         --bookshelf__font-size-number: var(--font-size-07)
@@ -215,12 +219,13 @@ a {
 }
 
 .bookshelf__book .l-box {
+    aspect-ratio: var(--tankōbon-aspect-ratio);
     --l-box__gutter: var(--space-03);
     background: #fff;
     background: rgba(255, 255, 255, 0.5);
     border: .125rem solid;
     border: var(--border-width-md) solid;
-    height: 100%;
+    /* height: 100%; */
     transform-origin: bottom;
     transition: transform var(--transition-speed) ease-in-out;
     will-change: transform;
@@ -278,7 +283,7 @@ a {
     font-size: 1rem
 }
 
-@media screen and (min-width:50em) {
+@media screen {
     .bookshelf__book .kodansha-logo {
         font-size: 1.8125rem
     }
@@ -308,11 +313,12 @@ a {
     }
 }
 
-.drag-sort-active {
+
+/* .drag-sort-active {
     margin-right: 0em !important;
     margin-left: 0em !important;
     transform: rotate(0deg) !important;
-}
+} */
 
 
 /* li.drag-sort-active .l-box {
