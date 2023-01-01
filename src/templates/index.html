@@ -7,9 +7,9 @@
     {% macro books(book) %}
     <li>
         {% if book.read_status|int == 1 %}
-        <a type="button" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="read">
+        <a type="button" style="text-decoration: none" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="read">
         {% else %} 
-        <a type="button" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="unread">
+        <a type="button" style="text-decoration: none" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="unread">
         {% endif %}
             <div class="l-box">
                 <p>{{book.title}}</p>

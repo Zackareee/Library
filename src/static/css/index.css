@@ -190,3 +190,22 @@ body {
 .valid-feedback {
     color: #2acc80;
 }
+
+
+/* ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    background: #e52d27;
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);
+    background: linear-gradient(to right, #b31217, #e52d27);
+    color: #fff;
+    list-style: none;
+} */
