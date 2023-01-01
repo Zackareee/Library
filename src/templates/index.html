@@ -7,14 +7,12 @@
     {% macro books(book) %}
     <li>
         {% if book.read_status|int == 1 %}
-        <a href="{{book.link}}" class="bookshelf__book" aria-current="read">
+        <a type="button" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="read">
         {% else %} 
-        <a href="{{book.link}}" class="bookshelf__book" aria-current="unread">
+        <a type="button" onclick="updateForm('{{book.id}}','{{book.title}}','{{book.volume}}')" data-toggle="modal" data-target="#editBookModal" class="bookshelf__book" aria-current="unread">
         {% endif %}
             <div class="l-box">
                 <p>{{book.title}}</p>
-
-
                 {% if book.volume|int > 0 %}
                 <div class="bookshelf__number">
                     <div>
@@ -30,11 +28,17 @@
         </a>
     </li>
 
-    {% endmacro %} {% block book_insert %}
+    {% endmacro %}
+
+    <!-- html for add form-->
+    {% block book_insert %}
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
+        <span aria-hidden="true">&times;</span>
+      </button>
     <h3>Add a book</h3>
     <p>Fill in the data below.</p>
     <form action="" method="post" style="text-align:center" novalidate role="form">
-
+        {{ BookForm.csrf_token }}
         <div class="row">
             <div class="col-12 col-sm-6">
                 <p>Name</p> {{BookForm.name}}
@@ -47,6 +51,32 @@
 
         <div class="form-button mt-3">
             {{BookForm.submit}}
+        </div>
+    </form>
+    {% endblock %}
+
+
+    <!-- html for edit form-->
+    {% block book_edit %}
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <h3>Edit a book</h3>
+    <p>Fill in the data below.</p>
+    <form action="" method="post" style="text-align:center" novalidate role="form">
+        {{ EditForm.csrf_token }} {{ EditForm.Eid }}
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <p>Name</p> {{EditForm.Ename}}
+            </div>
+            <div class="col-12 col-sm-6">
+                <p>Volume</p> {{EditForm.Evolume}}
+            </div>
+        </div>
+
+
+        <div class="form-button mt-3">
+            {{EditForm.Esubmit}}
         </div>
     </form>
     {% endblock %}

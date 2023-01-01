@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from src.forms import BookForm
+from src.forms import BookForm, EditForm
 from flask import Blueprint, render_template,request
 
 mainbp = Blueprint('main', __name__)
@@ -21,15 +21,20 @@ def add_header(response):
 
 @mainbp.route('/', methods=['GET', 'POST'])
 def index():
-
     create_book_form = BookForm()
+    edit_book_form = EditForm()
     conn = get_db_connection()
-    booksvar = conn.execute('SELECT * FROM books').fetchall()
-    conn.close()       
-    
+     
+     
     if request.method == "POST": #Submitting a form
         print("wow")
-        return render_template('index.html',  booksvar=booksvar,BookForm=create_book_form)
-
-    return render_template('index.html', booksvar=booksvar, BookForm=create_book_form)
+        if edit_book_form.validate_on_submit():
+            id = (edit_book_form.Eid.data) #TODO MUST CHECK AGAINST ID'S LINKED TO CURRENT USER TO AVOID MALICIOUS DATA EDITS. 
+            title = (edit_book_form.Ename.data)
+            volume = (edit_book_form.Evolume.data)
+            #if user has book id edit_book_form.Eid.data:
+            conn.execute(f"UPDATE books SET title = \"{title}\", volume = {volume} WHERE id = {id}")
+    booksvar = conn.execute('SELECT * FROM books').fetchall()
+    conn.close()      
+    return render_template('index.html', booksvar=booksvar, BookForm=create_book_form, EditForm=edit_book_form)
 
