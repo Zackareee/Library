@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
-
-
-*, body {
+*,
+body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -9,51 +8,57 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 .btn-check {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none
 }
 
-.btn-check:disabled + .btn, .btn-check[disabled] + .btn {
+.btn-check:disabled+.btn,
+.btn-check[disabled]+.btn {
     pointer-events: none;
     filter: none;
     opacity: .65
 }
 
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus+.btn,
+.btn:focus {
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
 }
 
-.btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
-    box-shadow: 0 0 0 .25rem rgba(108, 117, 125, .5)
-}
-
-.btn-check:active + .btn-outline-secondary, .btn-check:checked + .btn-outline-secondary, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show, .btn-outline-secondary:active {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
-}
-
-html, body {
-    height: 100%;
+html,
+body {
     background-color: #152733;
-
 }
 
 .input[type="radio"] {
     opacity: 0;
 }
 
+::placeholder {
+    color: #8D8D8D !important
+}
+
+.form-control:focus,
+.form-control,
+.input {
+    color: black !important;
+    font-family: 'Poppins' !important;
+    font-weight: 400 !important;
+}
+
+.input:valid {
+    background-color: 2px solid deepskyblue !important;
+}
+
 .form-holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .form-holder .form-content {
@@ -106,12 +111,17 @@ html, body {
     margin-bottom: 30px;
 }
 
-
-.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+.form-content label,
+.was-validated .form-check-input:invalid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select, .form-content input[type=date] {
+.form-content input[type=text],
+.form-content input[type=password],
+.form-content input[type=email],
+.form-content select,
+.form-content input[type=date] {
     width: 100%;
     padding: 9px 20px;
     text-align: left;
@@ -121,22 +131,21 @@ html, body {
     background-color: #fff;
     font-size: 15px;
     font-weight: 30;
-    color: #8D8D8D;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: 16px;
 }
 
-
-.btn-primary{
-    margin-top: 16px;
+.btn-primary {
     background-color: #6C757D;
     outline: none;
     border: 0px;
     box-shadow: none;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
     background-color: #495056;
     outline: none !important;
     border: none !important;
@@ -162,22 +171,22 @@ html, body {
     margin-bottom: 14px;
 }
 
-.form-content textarea:hover, .form-content textarea:focus {
+.form-content textarea:hover,
+.form-content textarea:focus {
     border: 0;
     background-color: #ebeff8;
     color: #8D8D8D;
 }
 
-.mv-up{
+.mv-up {
     margin-top: -9px !important;
     margin-bottom: 8px !important;
 }
 
-.invalid-feedback{
+.invalid-feedback {
     color: #ff606e;
 }
 
-.valid-feedback{
-   color: #2acc80;
+.valid-feedback {
+    color: #2acc80;
 }
-
