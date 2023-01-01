@@ -17,17 +17,21 @@ function handleDrag(item) {
         x = item.clientX,
         y = item.clientY;
 
+    selectedItem.parentNode.classList.add('parent-drag-active');
     selectedItem.classList.add('drag-sort-active');
     let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y).closest("li");
-    console.log(swapItem)
+
     if (list === swapItem.parentNode) {
+
         swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
         list.insertBefore(selectedItem, swapItem);
     }
 }
 
 function handleDrop(item) {
+    item.target.parentNode.classList.remove('parent-drag-active');
     item.target.classList.remove('drag-sort-active');
+
 }
 
 (() => { enableDragSort('drag-sort-enable') })();

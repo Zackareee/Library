@@ -292,21 +292,37 @@ a {
 }
 
 @media (any-hover:hover) {
-    .bookshelf>:hover:nth-child(n+2) a {
-        padding-left: 1.575em !important;
-        padding-right: .075em !important;
+    .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):nth-child(n+2) a {
+        margin-left: 1.575em;
+        margin-right: .075em;
     }
-    .bookshelf>:hover:first-child a {
-        padding-left: .075em;
-        padding-right: 1.575em
+    .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):first-child a {
+        margin-left: .075em;
+        margin-right: 1.575em;
     }
-    .bookshelf>:hover:first-child .l-box {
+    .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):first-child .l-box {
         transform: rotate(3.5deg)
     }
-    .bookshelf>:hover:nth-child(n+2) .l-box {
+    .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):nth-child(n+2) .l-box {
         transform: rotate(-3.5deg);
     }
 }
+
+.drag-sort-active {
+    margin-right: 0em !important;
+    margin-left: 0em !important;
+    transform: rotate(0deg) !important;
+}
+
+
+/* li.drag-sort-active .l-box {
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+    transform: rotate(0deg) !important;
+    background: transparent;
+    color: transparent;
+    border: 1px solid #4ca1af;
+} */
 
 .screen-reader-text {
     border: 0;
