@@ -91,12 +91,10 @@
 
     <!-- update edit form when clicked -->
     <script>
-        let div2 = document.getElementById('example');
-
-
+        let div2 = document.getElementsByClassName('l-box')[0];
         let r = document.querySelector(':root');
-        let oh = window.getComputedStyle(div2).getPropertyValue('height')
-        let ow = parseInt(window.getComputedStyle(div2).getPropertyValue('width'), 10)
+        let oh = window.getComputedStyle(div2).getPropertyValue('height') / 2
+        let ow = parseInt(window.getComputedStyle(div2).getPropertyValue('width'), 10) / 2
         let angle = -3.5;
         let radians = (180 / Math.PI)
         let oo = (ow * Math.cos(angle * radians)) + (ow * Math.sin(angle * radians))

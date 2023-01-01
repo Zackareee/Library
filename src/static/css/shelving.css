@@ -320,7 +320,7 @@ a {
     }
     .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):first-child a {
         margin-left: .075em;
-        margin-right: 1.575em;
+        margin-right: var(--origin-offset);
     }
     .bookshelf:not(.parent-drag-active)>:hover:not(.drag-sort-active):first-child .l-box {
         transform: rotate(3.5deg)
