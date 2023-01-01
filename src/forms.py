@@ -1,8 +1,8 @@
-from flask_wtf import FlaskForm
-from wtforms.fields import SubmitField, StringField, FieldList,FormField,RadioField,DecimalField,HiddenField
-from wtforms.validators import InputRequired,Optional
-from wtforms.fields.html5 import DateField
 import os
+
+from flask_wtf import FlaskForm
+from wtforms.fields import SubmitField, StringField, DecimalField, HiddenField
+from wtforms.validators import InputRequired, Optional
 
 if os.name == 'nt':
     s = "#"
