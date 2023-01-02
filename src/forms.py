@@ -21,3 +21,5 @@ class EditForm(FlaskForm):
   Ename =  StringField(validators=[InputRequired()], render_kw={'class':'form-control', 'placeholder':'One Piece' })
   Evolume = DecimalField(validators=[Optional()],render_kw={'class': 'form-control', 'placeholder':'001'})
   Esubmit = SubmitField('Submit', render_kw={'class':'btn btn-primary'})
+  Esubmitt = SubmitField('Delete', render_kw={'class': 'btn btn-primary'})
+

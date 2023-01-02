@@ -43,6 +43,12 @@ def index():
             link = (create_book_form.link.data)
             volume = (create_book_form.volume.data)
             cur.execute(f"INSERT INTO books(title,volume) VALUES('{name}','{volume}')")
+
+    if request.method == "POST": #Submitting a form
+        print("wow")
+        if edit_book_form.validate_on_submit():
+            id = (edit_book_form.Eid.data) #TODO MUST CHECK AGAINST ID'S LINKED TO CURRENT USER TO AVOID MALICIOUS DATA EDITS.
+            cur.execute(f"DELETE FROM books  WHERE id = {id}")
     booksvar = cur.execute('SELECT * FROM books').fetchall()
     conn.commit()
     conn.close()      
